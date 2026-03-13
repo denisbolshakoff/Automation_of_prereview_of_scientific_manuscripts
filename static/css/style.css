@@ -1,0 +1,239 @@
+/* Общий сброс настроек */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container {
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #dcdcdc;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    text-align: left;
+    color: #555;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="file"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button.submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.content {
+    text-align: left;
+}
+
+.content h2,
+.content p {
+    margin-bottom: 10px;
+}
+
+.upload-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.file-input {
+    flex: 1;
+    margin-bottom: -10px;
+}
+
+.submit-btn {
+    margin-top: 4px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.page-container {
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    background-color: #dcdcdc;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 200px;
+}
+
+.upload-container {
+    display: flex;
+    gap: 10px;
+}
+
+.file-input {
+    flex: 1;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+hr{
+    margin:20px 0;
+}
+
+/* карточки */
+
+.card {
+    background:white;
+    border-radius:12px;
+    padding:18px 22px;
+    margin-bottom:18px;
+    border:1px solid #e8e8e8;
+}
+
+.card h3{
+    font-size:15px;
+    color:#555;
+}
+
+.card-content {
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    margin: 0;
+    padding: 0;
+    display: block;          /* ← добавить */
+    min-height: 1em;         /* базовая минимальная высота, чтобы браузер не сжимал */
+}
+
+/* фиксированная высота */
+#second_message,
+#third_message{
+    min-height:calc(1.6em * 1);
+}
+
+#fourth_message {
+    min-height: calc(1.6em * 4);
+    line-height: 1.6;
+}
+/* серый служебный текст */
+
+.empty-text{
+    color:#b5b5b5;
+}
+
+/* первый блок */
+
+.card.decision{
+    border-left:6px solid #3b82f6;
+    background:#f8fbff;
+}
+
+/* pipeline */
+
+.pipeline{
+    margin:10px 0 15px 0;
+    font-size:14px;
+}
+
+.stage{
+    display:flex;
+    justify-content:space-between;
+}
+
+.stage-status{
+    font-weight:bold;
+}
+
+.stage.processing .stage-status{
+    color:orange;
+}
+
+.stage.done .stage-status{
+    color:green;
+}
+
+/* затемнение логотипа */
+
+.logo.loading{
+    filter:brightness(50%);
+    opacity:0.7;
+}

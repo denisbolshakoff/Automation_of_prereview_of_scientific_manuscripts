@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>LLM-2 Большаков</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}?v=9">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=19">    <style>
+        /* Эффект затемнения */
+        .loading img.logo {
+            filter: brightness(70%); /* затемняем логотип */
+            transition: filter 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div class="page-container">
+    <header>
+        <h1 class="title">{{ title | safe }}</h1>
+        <a href="/"><img src="/static/images/logo.svg" alt="Логотип" class="logo"></a>
+    </header>
+
+    <!-- Сообщения об ошибках и успехах -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+<form id="uploadForm" enctype="multipart/form-data" class="upload-form">
+    <div class="upload-container">
+        <input type="file" name="file" accept=".txt" required class="file-input">
+        <button type="button" id="uploadBtn" class="submit-btn">Загрузить файл</button>
+    </div>
+</form>
+    <main class="content">
+
+<p class="status-message">{{ message }}</p>
+
+<div class="pipeline" id="pipeline">
+    <div class="stage" id="stage1">
+        <span>1. Анализ решения</span>
+        <span class="stage-status">…</span>
+    </div>
+
+    <div class="stage" id="stage2">
+        <span>2. Подбор рецензентов</span>
+        <span class="stage-status">…</span>
+    </div>
+
+    <div class="stage" id="stage3">
+        <span>3. Краткое содержание</span>
+        <span class="stage-status">…</span>
+    </div>
+</div>
+
+    <hr />
+
+<div class="card decision">
+    <h3>Решение</h3>
+    <p class="card-content empty-text" id="second_message"> {{ second_message | default('<пусто>') }}</p>
+    </p>
+</div>
+
+<div class="card">
+    <h3>Рецензенты</h3>
+   <p class="card-content empty-text" id="third_message">  {{ third_message | default('<пусто>') }}</p>
+</div>
+
+<div class="card">
+    <h3>Краткое содержание</h3>
+   <p class="card-content empty-text" id="fourth_message"> {{ fourth_message | default('<пусто>') }} </p>
+</div>
+
+</main>
+</div>
+
+<!-- Подключаем JS -->
+<script src="{{ url_for('static', filename='js/main.js') }}?v=16"></script></body>
+</html>
