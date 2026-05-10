@@ -234,6 +234,6 @@ hr{
 /* затемнение логотипа */
 
 .logo.loading{
-    filter:brightness(50%);
+    filter:brightness(90%);
     opacity:0.7;
 }
