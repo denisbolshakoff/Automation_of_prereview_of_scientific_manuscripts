@@ -13,11 +13,17 @@ This README is available in two languages:
 ## Описание
 
 > [!IMPORTANT]
+
 > Это "обёртка" (*frontend*) над языковыми моделями, которая не будет работать при загрузке на компьютер. 
+
 > По этическим соображениям в репозиторий не загружены:
+
 > - предобученная на архитектуре полносвязных нейронных сетей модель `model_checkpoint.pth`, 
-> - файл `1_6.xlsx` с именами рецензентов 
-> - предобработанный корпус опубликованных статей и неопубликованных рукописей `clean_texts_articles_6.pkl`. 
+
+> - файл `1_6.xlsx` с именами рецензентов
+
+> - предобработанный корпус опубликованных статей и неопубликованных рукописей `clean_texts_articles_6.pkl`.
+
 > *Python*-скритпы для обучения с использованием архитектур полносвязной нейронной сети (*FFNN*), *Bidirectional Encoder Representations from Transformers* (*BERT*) и *Longformer* приведены в репозитории в папке `train_and_inference_model`.
 
 В проекте рассматриваются три направления предварительной обработки текстов для оптимизации редакционно-издательского процесса на этапе подготовки научных рукописей к рецензированию.
@@ -30,7 +36,7 @@ This README is available in two languages:
 
 Внедрение предложенного подхода позволяет сократить среднее время, затрачиваемое экспертами на рецензирование, примерно на 15% без изменения стандартов научной оценки.
 
-<img src="https://raw.githubusercontent.com/denisbolshakoff/Automation_of_prereview_of_scientific_manuscripts/main/screenshot.png" width="150">
+<img src="https://raw.githubusercontent.com/denisbolshakoff/Automation_of_prereview_of_scientific_manuscripts/main/screenshot.png" width="250">
 
 
 ## Лицензия
