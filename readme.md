@@ -30,6 +30,9 @@ This README is available in two languages:
 
 Внедрение предложенного подхода позволяет сократить среднее время, затрачиваемое экспертами на рецензирование, примерно на 15% без изменения стандартов научной оценки.
 
+![Скриншот программы](https://github.com/denisbolshakoff/Automation_of_prereview_of_scientific_manuscripts/blob/main/screenshot.png){width=100}
+
+
 ## Лицензия
 ![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
 
