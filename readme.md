@@ -523,38 +523,122 @@ A: Юридически – редакция журнала, так как си�
 A: Через постепенное внедрение: начать с режима «только просмотр» (модель показывает рекомендации, но не влияет на решения), собрать статистику совпадений, провести внутреннее обучение. Доверие формируется на основе доказанной полезности, а не принуждения.
 
 
+# English version below
 
 # Automation of pre-review of scientific manuscripts
 
 ## Description
-The repository presents the results of applying large language models (LLMs) based on transformer architectures to optimize the editorial workflow at the stage of preparing scientific manuscripts for peer review. Three directions of preliminary manuscript processing are considered.
-1. Preliminary evaluation of publication potential. Transformer-based models, including BERT and Longformer, were used to analyze manuscript texts and predict the probability of acceptance for publication. The models were trained on a corpus of previously processed submissions and classified new manuscripts as either “accepted” or “rejected.” The approach was tested using data from the Journal of “Almaz – Antey” Air and Space Defence Corporation. On a dataset of 1,000 manuscripts with an equal distribution of accepted and rejected papers, the method achieved an accuracy of approximately 90%.
 
-2. Reviewer assignment. A vector representation of each manuscript (a numerical description of its content) is generated and compared with representations of previously reviewed papers using cosine similarity. This method helps identify experts who have already evaluated thematically similar works, thereby improving the consistency and justification of reviewer selection. If the preliminary assessment indicates low publication potential, assigning only a single reviewer to prepare a reasoned rejection is considered sufficient.
 
-3. Automated summary generation. The transformer-based model is applied to generate concise summaries of 4–5 sentences directly from the full manuscript text. These summaries provide reviewers with a structured overview of the study’s topic and contribution, facilitating a faster decision on whether to accept the manuscript for review.
+---
 
-Implementation of the proposed approach reduces the average time required for peer review by approximately 15% while maintaining established standards of scientific evaluation.
+# 🇬🇧 English version
+
+## TL;DR (for journal editors)
+
+This project is a decision-support system for scientific journal editorial boards.
+
+It helps to:
+- estimate manuscript quality before peer review
+- reduce reviewer workload
+- assign an appropriate number of reviewers
+
+⚠️ Important:
+- the system must be trained on your journal’s data
+- it does NOT work out-of-the-box
+- it does NOT replace peer review
+
+---
+
+## What this project does
+
+The system analyzes a manuscript and predicts the probability of its acceptance.
+
+Based on this prediction, it recommends how many reviewers should be assigned:
+- low-quality manuscripts → fewer reviewers
+- higher-quality manuscripts → more reviewers
+
+The goal is to optimize editorial resources and speed up the review process.
+
+---
+
+## Example scenario
+
+A journal receives 100 manuscripts per month.
+
+Using this system:
+- low-quality papers are sent to fewer reviewers
+- medium-quality papers follow standard review
+- high-quality papers receive more attention
+
+As a result:
+- reviewer workload is reduced
+- editorial decisions are faster
+
+---
+
+## ⚠️ Important limitation
+
+This is NOT a ready-to-use product.
+
+Each journal must:
+- provide its own historical data (manuscripts and decisions)
+- train its own model
+- use its own reviewer pool
+
+Without this, the system will not work.
+
+---
+
+## How to use this in practice
+
+1. Collect historical data:
+   - manuscripts
+   - editorial decisions (accepted/rejected)
+   - reviewer assignments
+
+2. Prepare and clean the data
+
+3. Train the model on this data
+
+4. Evaluate model performance
+
+5. Integrate into editorial workflow
+
+---
+
+## Training complexity
+
+Training the system requires:
+- labeled data from a specific journal
+- some technical expertise
+- computational resources
+
+Simple models can be trained on a regular laptop.
+
+More advanced models (e.g., transformer-based models like BERT) require a GPU (≈12GB VRAM or more).
+
+---
+
+## What this system does NOT do
+
+- does not replace reviewers
+- does not make final decisions
+- does not guarantee correctness
+
+It is only a support tool for editors.
+
+---
+
+## Why this matters
+
+Scientific journals receive an increasing number of submissions,
+while the number of available reviewers is limited.
+
+This system helps to:
+- reduce reviewer overload
+- improve efficiency of editorial processes
+- support data-driven decision making
 
 ## License
 ![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
-
-Distributed under the CC BY-NC 4.0 [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/) (Creative Commons Attribution-NonCommercial).
-
-## Goals of the Project
-In process...
-
-## Objectives of the Project
-In process...
-
-## Tools Used
-In process...
-
-## Notable Result
-A simple fully connected neural network with the `OneHotEncoder` vectorizer gives much better results than the `CountVectorizer`, `TfidfVectorizer`, and `HashingVectorizer` vectorizers.
-
-## Key Findings
-The best characteristics in terms of classification, cosine distance and paraphrase are given by the following tracer models: *BERT*, *Longformer*, *bge-m3*, *Qwen*.
-
-> [!IMPORTANT]
-> The texts were sourced from the Scientific Journal of "Almaz - Antey" Air & Space Defense Corporation (covering publications from 2011–2024). Published materials are accessible online, while unpublished ones remain confidential.
