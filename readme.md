@@ -36,7 +36,7 @@ graph LR
 classDef nofill fill:none, stroke:none;
 
 
-    subgraph Clients[Вход]
+    subgraph Clients[Вход</br>One-Hot Enc]
         direction TB
 	 A1((" ")) 
 	 A2((" "))
