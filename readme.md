@@ -36,7 +36,7 @@ graph LR
 classDef nofill fill:none, stroke:none;
 
 
-    subgraph Clients[Входные<br/>данные]
+    subgraph Clients[Вход]
         direction TB
 	 A1((" ")) 
 	 A2((" "))
@@ -50,7 +50,7 @@ classDef nofill fill:none, stroke:none;
 	end
 
 	subgraph exit[Выход]
-	 C1(("1 or 0"))
+	 C1((" "))
 	end
 
 
@@ -62,6 +62,9 @@ classDef nofill fill:none, stroke:none;
 	L6(("w₆")):::nofill
 	L7(("w₇")):::nofill
 	L8(("w₈")):::nofill
+
+	L9(("1")):::nofill
+	L10(("0")):::nofill
 	
 	 A1 -.-L1-.-> B1
 	 A2 -.-L2-.-> B1
@@ -70,6 +73,10 @@ classDef nofill fill:none, stroke:none;
 	 A1-.-L4-.->B2
 	 A2-.-L5-.->B2
 	 A3-.-L6-.->B2
+
+
+	 C1 -.-> L9
+	 C1 -.-> L10
 
 
 	 B1-.-L7-.->C1(("1 or 0"))
