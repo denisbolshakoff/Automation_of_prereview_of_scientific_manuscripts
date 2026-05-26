@@ -31,24 +31,21 @@ This README is available in two languages:
 title: Схема полносвязной нейронной сети
 ---
 
-graph TB
+graph LR
 
 classDef nofill fill:none, stroke:none;
 
 A1((" ")) -.w_1_1.-> B1((" "))
 A2((" ")) -.w_1_2.- B1
 A3((" ")) -.w_1_3.- B1
-A4((" ")) -.w_1_4.- B1
 
 A1-.w_2_1.->B2((" "))
 A2-.w_2_2.->B2
 A3-.w_2_3.->B2
-A4-.w_2_4.->B2
 
 A1-.w_3_1.->B3((" "))
 A2-.w_3_2.->B3
 A3-.w_3_3.->B3
-A4-.w_3_4.->B3
 
 B1-.h_1_1.->C1(("1 or 0"))
 B2-.h_2_2.->C1
