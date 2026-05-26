@@ -54,14 +54,14 @@ classDef nofill fill:none, stroke:none;
 	end
 
 
-	L1["w₁"]:::nofill
-	L2["w₂"]:::nofill
-	L3["w₃"]:::nofill
-	L4["w₄"]:::nofill
-	L5["w₅"]:::nofill
-	L6["w₆"]:::nofill
-	L7["w₇"]:::nofill
-	L8["w₈"]:::nofill
+	L1(("w₁")):::nofill
+	L2(("w₂")):::nofill
+	L3(("w₃")):::nofill
+	L4(("w₄")):::nofill
+	L5(("w₅")):::nofill
+	L6(("w₆")):::nofill
+	L7(("w₇")):::nofill
+	L8(("w₈")):::nofill
 	
 	 A1 -.-L1-.-> B1
 	 A2 -.-L2-.-> B1
