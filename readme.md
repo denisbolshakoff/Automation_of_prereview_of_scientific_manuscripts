@@ -36,14 +36,14 @@ graph LR
 classDef nofill fill:none, stroke:none;
 
 
-    subgraph Clients[Входные данные]
+    subgraph Clients[Входные<br/>данные]
         direction TB
 	 A1((" ")) 
 	 A2((" "))
 	 A3((" "))
  	end
 
-	subgraph Hidden[Скрытый слой]
+	subgraph Hidden[Скрытый<br/>слой]
 	direction TB
 	 B1((" "))
 	 B2((" "))
