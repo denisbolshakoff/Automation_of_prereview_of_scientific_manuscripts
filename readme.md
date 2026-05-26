@@ -79,7 +79,7 @@ classDef nofill fill:none, stroke:none;
 	 C1 -.-> L10
 
 
-	 B1-.-L7-.->C1(("1 or 0"))
+	 B1-.-L7-.->C1
 	 B2-.-L8-.->C1
 
 ```
