@@ -35,7 +35,7 @@ graph LR
 
 classDef nofill fill:none, stroke:none;
 
-A1((" ")) -.$$\tiny w_{1,1}$$.- B1((" "))
+A1((" ")) -.w_{1,1}.- B1((" "))
 A2((" ")) -.$$\tiny w_{1,2}$$.- B1
 A3((" ")) -.$$\tiny w_{1,3}$$.- B1
 A4((" ")) -.$$\tiny w_{1,4}$$.- B1
