@@ -41,27 +41,26 @@ classDef nofill fill:none, stroke:none;
 	 A1((" ")) 
 	 A2((" "))
 	 A3((" "))
+	 L1(("w₁")):::nofill
+	 L2(("w₂")):::nofill
+	 L3(("w₃")):::nofill
+	 L4(("w₄")):::nofill
+	 L5(("w₅")):::nofill
+	 L6(("w₆")):::nofill
  	end
 
 	subgraph Hidden[Скрытый<br/>слой]
 	direction TB
 	 B1((" "))
 	 B2((" "))
+	 L7(("w₇")):::nofill
+	 L8(("w₈")):::nofill
 	end
 
 	subgraph exit[Выход]
 	 C1((" "))
 	end
 
-
-	L1(("w₁")):::nofill
-	L2(("w₂")):::nofill
-	L3(("w₃")):::nofill
-	L4(("w₄")):::nofill
-	L5(("w₅")):::nofill
-	L6(("w₆")):::nofill
-	L7(("w₇")):::nofill
-	L8(("w₈")):::nofill
 
 	L9(("1")):::nofill
 	L10(("0")):::nofill
