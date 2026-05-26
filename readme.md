@@ -38,24 +38,33 @@ classDef nofill fill:none, stroke:none;
 
     subgraph Clients[Входные данные]
         direction TB
+	 A1((" ")) 
+	 A2((" "))
+	 A3((" "))
+ 	end
+
+	subgraph Hidden[Скрытый слой]
+	direction TB
+	 B1((" "))
+	 B2((" "))
+	end
+
+	subgraph exit[Выход]
+	 C1(("1 or 0"))
+	end
+
+
 	 A1((" ")) -.w_1_1.-> B1((" "))
 	 A2((" ")) -.w_1_2.- B1
 	 A3((" ")) -.w_1_3.- B1
- 	end
 
-
-	subgraph Hidden
-	direction TB
 	 A1-.w_2_1.->B2((" "))
 	 A2-.w_2_2.->B2
 	 A3-.w_2_3.->B2
-	end
 
 
-	subgraph exit
 	 B1-.h_1_1.->C1(("1 or 0"))
 	 B2-.h_2_2.->C1
-	end
 ```
 
 
