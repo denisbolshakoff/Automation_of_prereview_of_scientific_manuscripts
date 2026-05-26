@@ -49,7 +49,7 @@ classDef nofill fill:none, stroke:none;
 	 L6(("w₆")):::nofill
  	end
 
-	subgraph Hidden[Скрытый<br/>слой]
+	subgraph Hidden[Скрытый<br/>слой<br/>ReLU]
 	direction TB
 	 B1((" "))
 	 B2((" "))
@@ -57,7 +57,7 @@ classDef nofill fill:none, stroke:none;
 	 L8(("w₈")):::nofill
 	end
 
-	subgraph exit[Выход]
+	subgraph exit[Выход<br/>SoftMax]
 	 C1((" "))
 	end
 
