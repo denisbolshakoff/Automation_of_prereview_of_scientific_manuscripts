@@ -388,7 +388,7 @@ def predict(text: str):
 if __name__ == "__main__":
     # Пример длинного текста (для демонстрации)
 
-    label, prob = predict(text_new_6)
+    label, prob = predict(clearing_text(text_new_6))
 
     print(f"Класс: {label}")
     print(f"Вероятность публикации: {round(prob, 3)}")
