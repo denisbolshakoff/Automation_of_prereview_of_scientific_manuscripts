@@ -48,20 +48,20 @@ classDef nofill fill:none, stroke:none;
 	 A1((" ")) 
 	 A2((" "))
 	 A3((" "))
-	 L1(("w₁")):::nofill
-	 L2(("w₂")):::nofill
-	 L3(("w₃")):::nofill
-	 L4(("w₄")):::nofill
-	 L5(("w₅")):::nofill
-	 L6(("w₆")):::nofill
+	 L1(("w_1")):::nofill
+	 L2(("w_2")):::nofill
+	 L3(("w_3")):::nofill
+	 L4(("w_4")):::nofill
+	 L5(("w_5")):::nofill
+	 L6(("w_6")):::nofill
  	end
 
 	subgraph Hidden[Скрытый слой ReLU]
 	direction TB
 	 B1((" "))
 	 B2((" "))
-	 L7(("w₇")):::nofill
-	 L8(("w₈")):::nofill
+	 L7(("w_7")):::nofill
+	 L8(("w_8")):::nofill
 	end
 
 	subgraph exit[Выход SoftMax]
