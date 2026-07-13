@@ -72,7 +72,8 @@ classDef nofill fill:none, stroke:none;
 	L9(("1")):::nofill
 	L10(("0")):::nofill
 	
-	 A1 -.-L1-.-> B1
+	 A1 -.->L1
+	 L1 -.-> B1
 	 A2 -.-L2-.-> B1
 	 A3 -.-L3-.-> B1
 
