@@ -38,7 +38,7 @@ This README is available in two languages:
 title: Схема полносвязной нейронной сети
 ---
 
-graph LR
+flowchart LR
 
 classDef nofill fill:none, stroke:none;
 
