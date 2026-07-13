@@ -43,7 +43,7 @@ graph LR
 classDef nofill fill:none, stroke:none;
 
 
-    subgraph Clients[Вход</br>One-Hot Enc]
+    subgraph Clients[Вход One-Hot Enc]
         direction TB
 	 A1((" ")) 
 	 A2((" "))
@@ -56,7 +56,7 @@ classDef nofill fill:none, stroke:none;
 	 L6(("w₆")):::nofill
  	end
 
-	subgraph Hidden[Скрытый<br/>слой<br/>ReLU]
+	subgraph Hidden[Скрытый слой ReLU]
 	direction TB
 	 B1((" "))
 	 B2((" "))
@@ -64,7 +64,7 @@ classDef nofill fill:none, stroke:none;
 	 L8(("w₈")):::nofill
 	end
 
-	subgraph exit[Выход<br/>SoftMax]
+	subgraph exit[Выход SoftMax]
 	 C1((" "))
 	end
 
