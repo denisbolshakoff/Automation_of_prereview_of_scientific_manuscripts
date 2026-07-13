@@ -40,62 +40,46 @@ title: Схема полносвязной нейронной сети
 
 flowchart LR
 
-classDef nofill fill:none, stroke:none;
+%% ---------- Вход ----------
+subgraph Input["Вход\nOne-Hot Enc"]
+direction TB
+A1((" "))
+A2((" "))
+A3((" "))
+end
 
+%% ---------- Скрытый ----------
+subgraph Hidden["Скрытый слой\nReLU"]
+direction TB
+B1((" "))
+B2((" "))
+end
 
-    subgraph Clients[Вход One-Hot Enc]
-        direction TB
-	 A1((" ")) 
-	 A2((" "))
-	 A3((" "))
-	 L1(("w_1")):::nofill
-	 L2(("w_2")):::nofill
-	 L3(("w_3")):::nofill
-	 L4(("w_4")):::nofill
-	 L5(("w_5")):::nofill
-	 L6(("w_6")):::nofill
- 	end
+%% ---------- Выход ----------
+subgraph Output["Выход\nSoftMax"]
+direction TB
+C((" "))
+end
 
-	subgraph Hidden[Скрытый слой ReLU]
-	direction TB
-	 B1((" "))
-	 B2((" "))
-	 L7(("w_7")):::nofill
-	 L8(("w_8")):::nofill
-	end
+Y1["1"]
+Y0["0"]
 
-	subgraph exit[Выход SoftMax]
-	 C1((" "))
-	end
+%% Веса первого слоя
+A1 -. "w₁" .-> B1
+A2 -. "w₂" .-> B1
+A3 -. "w₃" .-> B1
 
+A1 -. "w₄" .-> B2
+A2 -. "w₅" .-> B2
+A3 -. "w₆" .-> B2
 
-	L9(("1")):::nofill
-	L10(("0")):::nofill
-	
-	 A1 -.-> L1
-	 L1 -.-> B1
-	 A2 -.-> L2
-	 L2 -.-> B1
-	 A3 -.-> L3
-	 L3 -.-> B1
+%% Веса второго слоя
+B1 -. "w₇" .-> C
+B2 -. "w₈" .-> C
 
-	 A1 -.-> L4
-	 L4 -.-> B2
-	 A2 -.-> L5
-	 L5 -.-> B2
-	 A3 -.-> L6
-	 L6 -.-> B2
-
-
-	 C1 -.-> L9
-	 C1 -.-> L10
-
-
-	 B1 -.-> L7
-	 L7 -.-> C1
-	 B2 -.-> L8
-	 L8 -.-> C1
-
+%% Выход
+C --> Y1
+C --> Y0
 ```
 
 В приведенной выше нейросети 3 входа для данных, 2 нейрона на скрытом слое, один выход и всего 8 весов. В реальной сети 35549 входов для данных, 128 нейронов на скрытом слое, один выход и 4 550 658 обучаемых весов.
